@@ -49,6 +49,17 @@ describe Neo4j::NodeMixin, "#has_one", :type => :transactional do
         person.outgoing(:phone).first.should == b
       end
 
+      it "returns newly assigned node when initially instantiated with nil" do
+        phone_class = create_node_mixin
+        @class.has_one(:mobile).to(phone_class)
+
+        person = @class.new(:mobile => nil)
+        mobile = phone_class.new
+        person.mobile = mobile
+        person.mobile.should == mobile
+        person.rels.size.should == 1
+      end
+
     end
 
     context "generated 'phone' method" do
