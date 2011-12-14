@@ -1,6 +1,7 @@
 begin
   # make sure that this file is not loaded twice
   @_neo4j_rspec_loaded = true
+  require 'simplecov' # will use config from .simplecov
 
   require 'rubygems'
   require "bundler/setup"

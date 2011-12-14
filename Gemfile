@@ -19,7 +19,9 @@ group 'test' do
   gem "rspec-rails-matchers", :git => 'git://github.com/afcapel/rspec-rails-matchers.git'
 
   gem "test-unit"
+
   gem 'rcov'
+  gem 'simplecov', :require => false
 end
 
 #gem 'ruby-debug-base19' if RUBY_VERSION.include? "1.9"
