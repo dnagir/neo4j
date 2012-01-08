@@ -29,6 +29,7 @@ It comes included with the Apache Lucene document database.
   s.extra_rdoc_files = %w( README.rdoc )
   s.rdoc_options = ["--quiet", "--title", "Neo4j.rb", "--line-numbers", "--main", "README.rdoc", "--inline-source"]
 
+  s.add_dependency("neo4j-jars", "~> 0.0.1")
   s.add_dependency('orm_adapter', ">= 0.0.3")
   s.add_dependency("activemodel", ">= 3.0.0")
   s.add_dependency("will_paginate", ["3.0.pre4"])  # should be ~>3.0 but it's API has changed '
